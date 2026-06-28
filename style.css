@@ -58,7 +58,7 @@ h1 {
   text-align: center;
 }
 
-#mainBody {
+.mainBody {
   text-align: center;
   position:relative;
   z-index: 1;
