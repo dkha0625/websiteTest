@@ -1,3 +1,9 @@
+:root {
+  --text-header-color: #e64626; 
+  --navbar-bg-color: #e64626; 
+}
+
+
 body {
     font-family: sans-serif;
     margin: auto auto;
@@ -5,14 +11,14 @@ body {
 }
 
 h1 {
-    color: steelblue;
+    color: var(--text-header-color);
 }
 
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #333333;
+  background-color: var(--navbar-bg-color);
   display: flex;
 }
 
@@ -61,5 +67,61 @@ h1 {
 .mainBody {
   text-align: center;
   position:relative;
+  width: 80%;
+  margin: 0 auto;
   z-index: 1;
+}
+
+
+
+.hero-people {
+  height: 20vh;
+  background-image: url("media/sipmBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.hero-people::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.people-container {
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.person-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.person-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.mainBody h1 {
+  text-align: left;
+
+}
+.vision h1 {
+    text-align: center;
 }
